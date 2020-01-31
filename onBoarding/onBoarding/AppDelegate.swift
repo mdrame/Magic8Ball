@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Magic8Ball
+//  onBoarding
 //
-//  Created by Mohammed Drame on 11/17/19.
-//  Copyright © 2019 Mo Drame. All rights reserved.
+//  Created by Mohammed Drame on 1/31/20.
+//  Copyright © 2020 Mo Drame. All rights reserved.
 //
 
 import UIKit

@@ -10,18 +10,34 @@ import UIKit
 @IBDesignable
 class HomeViewController: UIViewController {
     
+    // MARK: -> Global Varibale
     
-    let pageImagesArray:[UIImage] = [#imageLiteral(resourceName: "one"), #imageLiteral(resourceName: "two"), #imageLiteral(resourceName: "three")]
+    let pageImagesArray = ["one", "two", "three"]
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Adding and Calling Programmatic Views and Constraints
-        
-        
-        /// adding pageControl to view. Over the scrollveiw in view herachey
-        //        view.addSubview(pageControl)
-        //        constraintsForPageControl()
+    /// Property Observer that changes both nunber of page and currentpage, reason for that is to make sure that our pageImagesArray arent been temper with.
+    var scrollViewCurrentPage: Int = 0 {
+        didSet {
+            print("Old Value: \(oldValue)")
+        }
+        willSet {
+            mainPageView.numberOfPages = pageImagesArray.count
+            mainPageView.currentPage = newValue
+            
+            print("Current Page: \(newValue)")
+        }
+    }
+    
+    
+    
+    // MARK: -> Outlets
+    @IBOutlet weak var mainPageView: UIPageControl!
+    
+    
+    // MARK: -> Global Function
+    
+    
+    /// ScrollViewCalls
+    func scrollViewCalls() {
         
         /// adding scroll view on self.UIView
         view.addSubview(scrollViewContiner)
@@ -33,16 +49,82 @@ class HomeViewController: UIViewController {
         /// Main scrollView constraints added on viewDid load
         mainScrollViewConstraints()
         
+                scrollViewContiner.delegate = self
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Adding and Calling Programmatic Views and Constraints
+        
+        
+        /// adding pageControl to view. Over the scrollveiw in view herachey
+        //        view.addSubview(pageControl)
+        //        constraintsForPageControl()
+        
+        /// This function mostly but not limited to adding subview to scrollview
+        scrollViewCalls()
+        
         
         /// adding lable to the first image in the scroll view
         imageToBeScrolledNumOne.addSubview(companyNameLabelConatiner)
         imageToBeScrolledNumOne.addSubview(aboutCompany)
+        //        imageToBeScrolledNumOne.addSubview(pageControl)
         
         
+       
         
         
         
     }
+    
+    
+    //// MARK: -> PageController SetUP
+    //  /// Setting MainPageControl  View
+    lazy var pageControl: UIPageControl = {
+        
+        let pageController = UIPageControl(frame: .zero)
+        pageController.backgroundColor = .black
+        pageController.tintColor = .systemBlue
+        pageController.currentPageIndicatorTintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        pageController.pageIndicatorTintColor = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)
+        pageController.currentPage = 2
+        pageController.translatesAutoresizingMaskIntoConstraints = false
+        /// Main pageControl constraints added on viewDid load
+        constraintsForPageControl()
+        return pageController
+        
+    }()
+    
+    
+    // MARK: -> PageControl Constraints
+    /// Setting UIPageControl  constraints
+    func constraintsForPageControl() {
+        
+        
+        
+        // Weight and Height Constraints
+        pageControl.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: 0).isActive = true
+        pageControl.heightAnchor.constraint(equalToConstant: self.view.frame.size.height / 5).isActive =  true
+        
+        
+        pageControl.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
+        
+        // Left and Right Constraints
+        pageControl.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        pageControl.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        
+        
+    }
+    
+    
     
     // MARK: -> ScrollView SetUp
     /// This closure is creating a scroll view
@@ -105,7 +187,7 @@ class HomeViewController: UIViewController {
         let mainImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
         
         mainImageView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) /// Chnage background image to test image avalebility.
-        mainImageView.image = UIImage(named: "one")
+        mainImageView.image = UIImage(named: "\(pageImagesArray[0])")
         mainImageView.contentMode = .scaleAspectFit
         return mainImageView
     }()
@@ -117,7 +199,7 @@ class HomeViewController: UIViewController {
         let mainImageView = UIImageView(frame: CGRect(x: self.view.frame.size.width , y: 0, width: self.view.frame.size.width , height: self.view.frame.size.height))
         
         mainImageView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) /// Chnage background image to test image avalebility.
-        mainImageView.image = UIImage(named: "two")
+        mainImageView.image = UIImage(named: "\(pageImagesArray[1])")
         mainImageView.contentMode = .scaleAspectFit
         return mainImageView
     }()
@@ -129,7 +211,7 @@ class HomeViewController: UIViewController {
         let mainImageView = UIImageView(frame: CGRect(x: self.view.frame.size.width * 2, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
         
         mainImageView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) /// Chnage background image to test image avalebility.
-        mainImageView.image = UIImage(named: "three")
+        mainImageView.image = UIImage(named: "\(pageImagesArray[2])")
         mainImageView.contentMode = .scaleAspectFit
         return mainImageView
     }()
@@ -143,7 +225,7 @@ class HomeViewController: UIViewController {
     lazy var companyNameLabelConatiner: UILabel = {
         
         let companyLable = UILabel(frame: CGRect(x: 0, y: 190, width: self.view.frame.size.width, height: 100))
-        companyLable.backgroundColor = .white
+        companyLable.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
         companyLable.text = "W I X E R"
         companyLable.font = companyLable.font.withSize(30.0)
         companyLable.textAlignment =  .center
@@ -157,7 +239,7 @@ class HomeViewController: UIViewController {
         
         let aboutCompanyLable = UILabel(frame: CGRect(x: 0, y: self.view.frame.size.height / 2 + 200, width: self.view.frame.size.width, height: 100))
         aboutCompanyLable.textColor = .systemPink
-        aboutCompanyLable.backgroundColor = .white
+        aboutCompanyLable.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
         aboutCompanyLable.text = "Online Computer Science Degree"
         aboutCompanyLable.font = aboutCompanyLable.font.withSize(12.0)
         aboutCompanyLable.textAlignment =  .center
@@ -167,6 +249,30 @@ class HomeViewController: UIViewController {
     
     
     
+    
+    
+}
+
+
+
+
+extension HomeViewController: UIScrollViewDelegate {
+    
+    
+    // For determining the current pageConroller, I will be compring scroll view width to get current page by using contentoffset which is scrollable.
+    /// This function divides the scroll view width and compare it with  a view width to determine which page number we are on
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        if scrollView.contentOffset == CGPoint(x: 0, y: 0) {
+             /// Returns the current page number to scrollViewCurrentPage property observer
+            scrollViewCurrentPage = 0
+        } else if scrollView.contentOffset == CGPoint(x: self.view.frame.size.width, y: 0) {
+            scrollViewCurrentPage = 1
+        } else if scrollView.contentOffset == CGPoint(x: self.view.frame.size.width * 2, y: 0) {
+            scrollViewCurrentPage = 2
+        }
+        
+    }
     
     
     
@@ -190,35 +296,4 @@ class HomeViewController: UIViewController {
 
 //
 //
-//// MARK: -> PageController SetUP
-//  /// Setting MainPageControl  View
-//  lazy var pageControl: UIPageControl = {
-//
-//      let pageController = UIPageControl(frame: .zero)
-//      pageController.backgroundColor = .black
-//      pageController.translatesAutoresizingMaskIntoConstraints = false
-//      /// Main pageControl constraints added on viewDid load
-//      constraintsForPageControl()
-//      return pageController
-//
-//  }()
-//
-//
-//  // MARK: -> PageControl Constraints
-//  /// Setting UIPageControl  constraints
-//  func constraintsForPageControl() {
-//
-//
-//
-//      // Weight and Height Constraints
-//      pageControl.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: 0).isActive = true
-//      pageControl.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: 6).isActive = true
-//
-//      pageControl.topAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 20).isActive = true
-//
-//      // Left and Right Constraints
-//      //        pageView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-//      //        pageView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-//
-//
-//  }
+

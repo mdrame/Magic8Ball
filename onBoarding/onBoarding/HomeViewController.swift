@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     
     // MARK: -> Global Varibale
     
+    // I'm counting the photo instead of a imageview array because then i'm certain that I'got pacture in all my imageView
     let pageImagesArray = ["one", "two", "three"]
     
     /// Property Observer that changes both nunber of page and currentpage, reason for that is to make sure that our pageImagesArray arent been temper with.
@@ -61,6 +62,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
         // Adding and Calling Programmatic Views and Constraints
         
@@ -188,7 +191,7 @@ class HomeViewController: UIViewController {
         
         mainImageView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) /// Chnage background image to test image avalebility.
         mainImageView.image = UIImage(named: "\(pageImagesArray[0])")
-        mainImageView.contentMode = .scaleAspectFit
+        mainImageView.contentMode = .center
         return mainImageView
     }()
     
@@ -200,7 +203,11 @@ class HomeViewController: UIViewController {
         
         mainImageView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) /// Chnage background image to test image avalebility.
         mainImageView.image = UIImage(named: "\(pageImagesArray[1])")
-        mainImageView.contentMode = .scaleAspectFit
+        mainImageView.contentMode = .center
+        
+        
+       
+        
         return mainImageView
     }()
     
@@ -212,7 +219,7 @@ class HomeViewController: UIViewController {
         
         mainImageView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) /// Chnage background image to test image avalebility.
         mainImageView.image = UIImage(named: "\(pageImagesArray[2])")
-        mainImageView.contentMode = .scaleAspectFit
+        mainImageView.contentMode = .center
         return mainImageView
     }()
     
@@ -230,6 +237,12 @@ class HomeViewController: UIViewController {
         companyLable.font = companyLable.font.withSize(30.0)
         companyLable.textAlignment =  .center
         
+        // styling
+               companyLable.layer.shadowColor = #colorLiteral(red: 0.1512203515, green: 0.1612353325, blue: 0.1522695124, alpha: 1)
+               companyLable.layer.shadowOffset = CGSize(width: 0, height: 0)
+               companyLable.layer.shadowOpacity = 2;
+               companyLable.layer.shadowRadius = 10;
+        
         return companyLable
         
     }()
@@ -238,7 +251,7 @@ class HomeViewController: UIViewController {
     lazy var aboutCompany: UILabel = {
         
         let aboutCompanyLable = UILabel(frame: CGRect(x: 0, y: self.view.frame.size.height / 2 + 200, width: self.view.frame.size.width, height: 100))
-        aboutCompanyLable.textColor = .systemPink
+        aboutCompanyLable.textColor = .black
         aboutCompanyLable.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
         aboutCompanyLable.text = "Online Computer Science Degree"
         aboutCompanyLable.font = aboutCompanyLable.font.withSize(12.0)
@@ -266,10 +279,13 @@ extension HomeViewController: UIScrollViewDelegate {
         if scrollView.contentOffset == CGPoint(x: 0, y: 0) {
              /// Returns the current page number to scrollViewCurrentPage property observer
             scrollViewCurrentPage = 0
+         
         } else if scrollView.contentOffset == CGPoint(x: self.view.frame.size.width, y: 0) {
             scrollViewCurrentPage = 1
+           
         } else if scrollView.contentOffset == CGPoint(x: self.view.frame.size.width * 2, y: 0) {
             scrollViewCurrentPage = 2
+           
         }
         
     }

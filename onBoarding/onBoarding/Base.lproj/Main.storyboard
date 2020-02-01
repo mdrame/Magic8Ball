@@ -14,13 +14,28 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="81f-8v-DNS">
+                                <rect key="frame" x="0.0" y="833" width="414" height="37"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="pageIndicatorTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.15122035145759583" green="0.16123533248901367" blue="0.15226951241493225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="81f-8v-DNS" secondAttribute="trailing" id="2nQ-qX-s76"/>
+                            <constraint firstAttribute="bottom" secondItem="81f-8v-DNS" secondAttribute="bottom" constant="26" id="88p-jj-LsM"/>
+                            <constraint firstItem="81f-8v-DNS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="833" id="LPj-Jc-TzX"/>
+                            <constraint firstItem="81f-8v-DNS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Lgq-xm-1Bs"/>
+                            <constraint firstItem="81f-8v-DNS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TgA-ta-hdn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="255" y="25"/>
+            <point key="canvasLocation" x="253.62318840579712" y="24.776785714285712"/>
         </scene>
     </scenes>
 </document>

@@ -50,7 +50,7 @@ class HomeViewController: UIViewController {
         /// Main scrollView constraints added on viewDid load
         mainScrollViewConstraints()
         
-                scrollViewContiner.delegate = self
+        scrollViewContiner.delegate = self
         
     }
     
@@ -81,7 +81,7 @@ class HomeViewController: UIViewController {
         imageToBeScrolledNumOne.addSubview(aboutCompany)
         //        imageToBeScrolledNumOne.addSubview(pageControl)
         
-        
+     
        
         
         
@@ -231,7 +231,7 @@ class HomeViewController: UIViewController {
     /// Setting up company lable using a closure
     lazy var companyNameLabelConatiner: UILabel = {
         
-        let companyLable = UILabel(frame: CGRect(x: 0, y: 190, width: self.view.frame.size.width, height: 100))
+        let companyLable = UILabel(frame: CGRect(x: 0, y: self.view.frame.size.width / 2, width: self.view.frame.size.width, height: self.aboutCompany.frame.size.height))
         companyLable.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
         companyLable.text = "W I X E R"
         companyLable.font = companyLable.font.withSize(30.0)
@@ -244,8 +244,27 @@ class HomeViewController: UIViewController {
                companyLable.layer.shadowRadius = 10;
         
         return companyLable
-        
+//
     }()
+    
+    func nameConstraint() {
+        
+        companyNameLabelConatiner.translatesAutoresizingMaskIntoConstraints =  false
+        // top constraints
+//        companyNameLabelConatiner.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 60).isActive = true
+        companyNameLabelConatiner.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0).isActive = true
+        companyNameLabelConatiner.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: self.imageToBeScrolledNumOne.frame.size.height).isActive = true
+        
+        
+//         leading and trailling
+        companyNameLabelConatiner.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        companyNameLabelConatiner.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        // width and hegiht
+        companyNameLabelConatiner.widthAnchor.constraint(equalToConstant: self.view.frame.size.width).isActive = true
+        companyNameLabelConatiner.heightAnchor.constraint(equalToConstant: self.view.frame.size.height / 5).isActive = true
+        
+        
+    }
     
     
     lazy var aboutCompany: UILabel = {

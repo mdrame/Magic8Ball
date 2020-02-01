@@ -77,12 +77,12 @@ class HomeViewController: UIViewController {
         
         
         /// adding lable to the first image in the scroll view
-        imageToBeScrolledNumOne.addSubview(companyNameLabelConatiner)
-        imageToBeScrolledNumOne.addSubview(aboutCompany)
+//        imageToBeScrolledNumOne.addSubview(companyNameLabelConatiner)
+//        imageToBeScrolledNumOne.addSubview(aboutCompany)
         //        imageToBeScrolledNumOne.addSubview(pageControl)
         
-     
-       
+        
+        
         
         
         
@@ -191,7 +191,7 @@ class HomeViewController: UIViewController {
         
         mainImageView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) /// Chnage background image to test image avalebility.
         mainImageView.image = UIImage(named: "\(pageImagesArray[0])")
-        mainImageView.contentMode = .center
+        mainImageView.contentMode = .scaleToFill
         return mainImageView
     }()
     
@@ -203,10 +203,10 @@ class HomeViewController: UIViewController {
         
         mainImageView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) /// Chnage background image to test image avalebility.
         mainImageView.image = UIImage(named: "\(pageImagesArray[1])")
-        mainImageView.contentMode = .center
+        mainImageView.contentMode = .scaleToFill
         
         
-       
+        
         
         return mainImageView
     }()
@@ -219,7 +219,7 @@ class HomeViewController: UIViewController {
         
         mainImageView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) /// Chnage background image to test image avalebility.
         mainImageView.image = UIImage(named: "\(pageImagesArray[2])")
-        mainImageView.contentMode = .center
+        mainImageView.contentMode = .scaleToFill
         return mainImageView
     }()
     
@@ -238,25 +238,25 @@ class HomeViewController: UIViewController {
         companyLable.textAlignment =  .center
         
         // styling
-               companyLable.layer.shadowColor = #colorLiteral(red: 0.1512203515, green: 0.1612353325, blue: 0.1522695124, alpha: 1)
-               companyLable.layer.shadowOffset = CGSize(width: 0, height: 0)
-               companyLable.layer.shadowOpacity = 2;
-               companyLable.layer.shadowRadius = 10;
+        companyLable.layer.shadowColor = #colorLiteral(red: 0.1512203515, green: 0.1612353325, blue: 0.1522695124, alpha: 1)
+        companyLable.layer.shadowOffset = CGSize(width: 0, height: 0)
+        companyLable.layer.shadowOpacity = 2;
+        companyLable.layer.shadowRadius = 10;
         
         return companyLable
-//
+        //
     }()
     
     func nameConstraint() {
         
         companyNameLabelConatiner.translatesAutoresizingMaskIntoConstraints =  false
         // top constraints
-//        companyNameLabelConatiner.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 60).isActive = true
+        //        companyNameLabelConatiner.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 60).isActive = true
         companyNameLabelConatiner.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0).isActive = true
         companyNameLabelConatiner.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: self.imageToBeScrolledNumOne.frame.size.height).isActive = true
         
         
-//         leading and trailling
+        //         leading and trailling
         companyNameLabelConatiner.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         companyNameLabelConatiner.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         // width and hegiht
@@ -296,15 +296,15 @@ extension HomeViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         if scrollView.contentOffset == CGPoint(x: 0, y: 0) {
-             /// Returns the current page number to scrollViewCurrentPage property observer
+            /// Returns the current page number to scrollViewCurrentPage property observer
             scrollViewCurrentPage = 0
-         
+            
         } else if scrollView.contentOffset == CGPoint(x: self.view.frame.size.width, y: 0) {
             scrollViewCurrentPage = 1
-           
+            
         } else if scrollView.contentOffset == CGPoint(x: self.view.frame.size.width * 2, y: 0) {
             scrollViewCurrentPage = 2
-           
+            
         }
         
     }

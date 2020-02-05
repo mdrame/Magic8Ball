@@ -34,6 +34,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var mainPageView: UIPageControl!
     
     
+    
     // MARK: -> Global Function
     
     
@@ -47,10 +48,29 @@ class HomeViewController: UIViewController {
         scrollViewContiner.addSubview(imageToBeScrolledNumTwo)
         scrollViewContiner.addSubview(imageToBeScrolledNumThree)
         
+        
+        
+        
+        
         /// Main scrollView constraints added on viewDid load
         mainScrollViewConstraints()
         
         scrollViewContiner.delegate = self
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    /// change navigation code
+    func navigationCalls() {
+        /// This function attempts to remote the navigtion bar on the onBoarding screens.
+        self.navigationController?.isNavigationBarHidden = true
+        
         
     }
     
@@ -74,12 +94,17 @@ class HomeViewController: UIViewController {
         
         /// This function mostly but not limited to adding subview to scrollview
         scrollViewCalls()
+        /// handles all the uinavgation calls
+        navigationCalls()
+        
         
         
         /// adding lable to the first image in the scroll view
-//        imageToBeScrolledNumOne.addSubview(companyNameLabelConatiner)
-//        imageToBeScrolledNumOne.addSubview(aboutCompany)
+        //        imageToBeScrolledNumOne.addSubview(companyNameLabelConatiner)
+        //        imageToBeScrolledNumOne.addSubview(aboutCompany)
         //        imageToBeScrolledNumOne.addSubview(pageControl)
+        
+        
         
         
         
@@ -139,11 +164,12 @@ class HomeViewController: UIViewController {
         mainScrollView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) /// Test ScrollView Presents
         mainScrollView.showsHorizontalScrollIndicator = false
         mainScrollView.contentSize.height =  self.view.frame.size.height
+        /// the width of the scrollview is equal to three view, which are the same size as our uiimageview
         mainScrollView.contentSize.width = self.view.frame.size.width * 3
         mainScrollView.isPagingEnabled =  true
         
         mainScrollView.isScrollEnabled =  true
-        //        mainScrollView.isPagingEnabled = true
+        
         
         
         return mainScrollView
@@ -169,8 +195,8 @@ class HomeViewController: UIViewController {
         // Todo add the page view as a super view on this scrollview
         scrollViewContiner.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: -60).isActive = true
         // Wdith and height
-        scrollViewContiner.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: 0).isActive = true
-        scrollViewContiner.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: 20).isActive = true
+        scrollViewContiner.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: 0.0).isActive = true
+        scrollViewContiner.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: 0.0).isActive = true
         
         
         
@@ -184,7 +210,7 @@ class HomeViewController: UIViewController {
     // MARK: -> ImageView SetUp
     
     
-    /// This closure is creating a scroll view
+    /// This closure is creating a imageview, constraints are set to view height and widh.
     lazy var imageToBeScrolledNumOne: UIImageView = {
         
         let mainImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
@@ -192,6 +218,19 @@ class HomeViewController: UIViewController {
         mainImageView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) /// Chnage background image to test image avalebility.
         mainImageView.image = UIImage(named: "\(pageImagesArray[0])")
         mainImageView.contentMode = .scaleToFill
+        
+        
+        
+        
+//        NSLayoutConstraint.activate([
+//            // width, heiht constraints
+//            self.nextToLogInButton.widthAnchor.constraint(equalToConstant: 200),
+//            self.nextToLogInButton.heightAnchor.constraint(equalToConstant: 150),
+//
+//            // Bottom, Leading, Trailing constraints
+//            self.nextToLogInButton.topAnchor.constraint(equalTo: self.imageToBeScrolledNumOne.topAnchor, constant: self.imageToBeScrolledNumOne.frame.size.height / 2 + 20),
+//
+//        ])
         return mainImageView
     }()
     
@@ -220,6 +259,11 @@ class HomeViewController: UIViewController {
         mainImageView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) /// Chnage background image to test image avalebility.
         mainImageView.image = UIImage(named: "\(pageImagesArray[2])")
         mainImageView.contentMode = .scaleToFill
+        
+        // adding button on imageView
+        mainImageView.addSubview(self.nextToLogInButton)
+        
+        
         return mainImageView
     }()
     
@@ -278,6 +322,44 @@ class HomeViewController: UIViewController {
         return aboutCompanyLable
         
     }()
+    
+    
+    
+    lazy var nextToLogInButton: UIButton = {
+        
+        let logInButton = UIButton(frame: CGRect(x: self.view.frame.size.width / 2 - 100, y: self.view.frame.size.height / 2 + 217, width: self.view.frame.size.width / 2, height: 60))
+
+        logInButton.backgroundColor = .systemBlue
+        logInButton.setTitle("L O G I N", for: .normal)
+        logInButton.addTarget(self, action: #selector(logInButtonPressed), for: .touchUpInside)
+        logInButton.isUserInteractionEnabled = true
+//        logInButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        // styling
+        logInButton.layer.cornerRadius =  10
+        
+
+        return logInButton
+        
+    }()
+    
+    
+    
+
+    @objc func logInButtonPressed() {
+        
+            print("Seguing .... ")
+            let logInViewController = LoginViewController()
+            present(logInViewController, animated: true, completion: nil)
+      
+        }
+    
+    
+    
+   
+    
+    
+    
     
     
     

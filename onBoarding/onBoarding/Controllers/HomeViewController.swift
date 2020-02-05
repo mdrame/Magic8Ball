@@ -7,10 +7,19 @@
 //
 
 import UIKit
-@IBDesignable
+
+
+
+
+
 class HomeViewController: UIViewController {
     
+    
+    
+    
+    
     // MARK: -> Global Varibale
+    
     
     // I'm counting the photo instead of a imageview array because then i'm certain that I'got pacture in all my imageView
     let pageImagesArray = ["one", "two", "three"]
@@ -28,6 +37,18 @@ class HomeViewController: UIViewController {
         }
     }
     
+    
+//        func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+//            let x = targetContentOffset.pointee.x
+//            mainPageView.currentPage = Int(x / view.frame.width)
+//            if mainPageView.currentPage == 2 {
+//                nextToLogInButton.isHidden = false
+////                nextToLogInButton.isUserInteractionEnabled = true
+//            } else {
+//                nextToLogInButton.isHidden = true
+////                nextToLogInButton.isUserInteractionEnabled = false
+//            }
+//        }
     
     
     // MARK: -> Outlets
@@ -48,7 +69,7 @@ class HomeViewController: UIViewController {
         scrollViewContiner.addSubview(imageToBeScrolledNumTwo)
         scrollViewContiner.addSubview(imageToBeScrolledNumThree)
         
-        
+//        self.view.addSubview(nextToLogInButton)
         
         
         
@@ -75,6 +96,22 @@ class HomeViewController: UIViewController {
     }
     
     
+    func buttonCalls() {
+        
+        self.imageToBeScrolledNumThree.addSubview(self.nextToLogInButton)
+//
+//              NSLayoutConstraint.activate([
+//                  self.nextToLogInButton.centerXAnchor.constraint(equalTo: self.mainPageView.centerXAnchor),
+//                  self.nextToLogInButton.centerYAnchor.constraint(equalTo: self.mainPageView.centerYAnchor),
+//
+//                  self.nextToLogInButton.widthAnchor.constraint(equalTo: self.mainPageView.widthAnchor),
+//                  self.nextToLogInButton.heightAnchor.constraint(equalTo: self.mainPageView.heightAnchor)
+//              ])
+//
+        
+    }
+    
+    
     
     
     
@@ -97,12 +134,15 @@ class HomeViewController: UIViewController {
         /// handles all the uinavgation calls
         navigationCalls()
         
-        
+        buttonCalls()
         
         /// adding lable to the first image in the scroll view
         //        imageToBeScrolledNumOne.addSubview(companyNameLabelConatiner)
         //        imageToBeScrolledNumOne.addSubview(aboutCompany)
         //        imageToBeScrolledNumOne.addSubview(pageControl)
+        
+        
+        
         
         
         
@@ -222,15 +262,15 @@ class HomeViewController: UIViewController {
         
         
         
-//        NSLayoutConstraint.activate([
-//            // width, heiht constraints
-//            self.nextToLogInButton.widthAnchor.constraint(equalToConstant: 200),
-//            self.nextToLogInButton.heightAnchor.constraint(equalToConstant: 150),
-//
-//            // Bottom, Leading, Trailing constraints
-//            self.nextToLogInButton.topAnchor.constraint(equalTo: self.imageToBeScrolledNumOne.topAnchor, constant: self.imageToBeScrolledNumOne.frame.size.height / 2 + 20),
-//
-//        ])
+        //        NSLayoutConstraint.activate([
+        //            // width, heiht constraints
+        //            self.nextToLogInButton.widthAnchor.constraint(equalToConstant: 200),
+        //            self.nextToLogInButton.heightAnchor.constraint(equalToConstant: 150),
+        //
+        //            // Bottom, Leading, Trailing constraints
+        //            self.nextToLogInButton.topAnchor.constraint(equalTo: self.imageToBeScrolledNumOne.topAnchor, constant: self.imageToBeScrolledNumOne.frame.size.height / 2 + 20),
+        //
+        //        ])
         return mainImageView
     }()
     
@@ -260,8 +300,8 @@ class HomeViewController: UIViewController {
         mainImageView.image = UIImage(named: "\(pageImagesArray[2])")
         mainImageView.contentMode = .scaleToFill
         
-        // adding button on imageView
-        mainImageView.addSubview(self.nextToLogInButton)
+       mainImageView.isUserInteractionEnabled = true
+        
         
         
         return mainImageView
@@ -327,36 +367,39 @@ class HomeViewController: UIViewController {
     
     lazy var nextToLogInButton: UIButton = {
         
-        let logInButton = UIButton(frame: CGRect(x: self.view.frame.size.width / 2 - 100, y: self.view.frame.size.height / 2 + 217, width: self.view.frame.size.width / 2, height: 60))
-
+        let logInButton = UIButton(frame: CGRect(x: 10, y: 300, width: 200, height: 200))
+        
         logInButton.backgroundColor = .systemBlue
         logInButton.setTitle("L O G I N", for: .normal)
+        // target
         logInButton.addTarget(self, action: #selector(logInButtonPressed), for: .touchUpInside)
-        logInButton.isUserInteractionEnabled = true
+//        logInButton.isUserInteractionEnabled = true
 //        logInButton.translatesAutoresizingMaskIntoConstraints = false
         
         // styling
         logInButton.layer.cornerRadius =  10
+//        logInButton.isHidden = true
         
-
         return logInButton
         
     }()
     
     
     
-
+    
+    
+    
     @objc func logInButtonPressed() {
         
-            print("Seguing .... ")
-            let logInViewController = LoginViewController()
-            present(logInViewController, animated: true, completion: nil)
-      
-        }
+        print("Seguing .... ")
+        //            let logInViewController = LoginViewController()
+        //            present(logInViewController, animated: true, completion: nil)
+        
+    }
     
     
     
-   
+    
     
     
     

@@ -13,11 +13,7 @@ import UIKit
 
 
 class HomeViewController: UIViewController {
-    
-    
-    
-    
-    
+
     // MARK: -> Global Varibale
     
     
@@ -38,17 +34,17 @@ class HomeViewController: UIViewController {
     }
     
     
-//        func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-//            let x = targetContentOffset.pointee.x
-//            mainPageView.currentPage = Int(x / view.frame.width)
-//            if mainPageView.currentPage == 2 {
-//                nextToLogInButton.isHidden = false
-////                nextToLogInButton.isUserInteractionEnabled = true
-//            } else {
-//                nextToLogInButton.isHidden = true
-////                nextToLogInButton.isUserInteractionEnabled = false
-//            }
-//        }
+    //        func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    //            let x = targetContentOffset.pointee.x
+    //            mainPageView.currentPage = Int(x / view.frame.width)
+    //            if mainPageView.currentPage == 2 {
+    //                nextToLogInButton.isHidden = false
+    ////                nextToLogInButton.isUserInteractionEnabled = true
+    //            } else {
+    //                nextToLogInButton.isHidden = true
+    ////                nextToLogInButton.isUserInteractionEnabled = false
+    //            }
+    //        }
     
     
     // MARK: -> Outlets
@@ -69,7 +65,7 @@ class HomeViewController: UIViewController {
         scrollViewContiner.addSubview(imageToBeScrolledNumTwo)
         scrollViewContiner.addSubview(imageToBeScrolledNumThree)
         
-//        self.view.addSubview(nextToLogInButton)
+        //        self.view.addSubview(nextToLogInButton)
         
         
         
@@ -99,15 +95,15 @@ class HomeViewController: UIViewController {
     func buttonCalls() {
         
         self.imageToBeScrolledNumThree.addSubview(self.nextToLogInButton)
-//
-//              NSLayoutConstraint.activate([
-//                  self.nextToLogInButton.centerXAnchor.constraint(equalTo: self.mainPageView.centerXAnchor),
-//                  self.nextToLogInButton.centerYAnchor.constraint(equalTo: self.mainPageView.centerYAnchor),
-//
-//                  self.nextToLogInButton.widthAnchor.constraint(equalTo: self.mainPageView.widthAnchor),
-//                  self.nextToLogInButton.heightAnchor.constraint(equalTo: self.mainPageView.heightAnchor)
-//              ])
-//
+        //
+        //              NSLayoutConstraint.activate([
+        //                  self.nextToLogInButton.centerXAnchor.constraint(equalTo: self.mainPageView.centerXAnchor),
+        //                  self.nextToLogInButton.centerYAnchor.constraint(equalTo: self.mainPageView.centerYAnchor),
+        //
+        //                  self.nextToLogInButton.widthAnchor.constraint(equalTo: self.mainPageView.widthAnchor),
+        //                  self.nextToLogInButton.heightAnchor.constraint(equalTo: self.mainPageView.heightAnchor)
+        //              ])
+        //
         
     }
     
@@ -300,7 +296,7 @@ class HomeViewController: UIViewController {
         mainImageView.image = UIImage(named: "\(pageImagesArray[2])")
         mainImageView.contentMode = .scaleToFill
         
-       mainImageView.isUserInteractionEnabled = true
+        mainImageView.isUserInteractionEnabled = true
         
         
         
@@ -366,19 +362,19 @@ class HomeViewController: UIViewController {
     
     
     lazy var nextToLogInButton: UIButton = {
-        
-        let logInButton = UIButton(frame: CGRect(x: 10, y: 300, width: 200, height: 200))
+        // constraints to be added later!!!
+        let logInButton = UIButton(frame: CGRect(x: 80, y: 670, width: 250, height: 50))
         
         logInButton.backgroundColor = .systemBlue
-        logInButton.setTitle("L O G I N", for: .normal)
+        logInButton.setTitle("CONTINUE", for: .normal)
         // target
         logInButton.addTarget(self, action: #selector(logInButtonPressed), for: .touchUpInside)
-//        logInButton.isUserInteractionEnabled = true
-//        logInButton.translatesAutoresizingMaskIntoConstraints = false
+        //        logInButton.isUserInteractionEnabled = true
+        //        logInButton.translatesAutoresizingMaskIntoConstraints = false
         
         // styling
         logInButton.layer.cornerRadius =  10
-//        logInButton.isHidden = true
+        //        logInButton.isHidden = true
         
         return logInButton
         
@@ -388,12 +384,16 @@ class HomeViewController: UIViewController {
     
     
     
-    
+    /// This functions run when user press the login button on the last scrollview window, This function segue to the login viewcontroller, and also reset the navigation stack, by remove the onboarding vc from the navigation stack.
     @objc func logInButtonPressed() {
         
         print("Seguing .... ")
-        //            let logInViewController = LoginViewController()
-        //            present(logInViewController, animated: true, completion: nil)
+        
+        self.navigationController?.initRootViewController(vc: LoginViewController())
+        
+        
+        
+        
         
     }
     

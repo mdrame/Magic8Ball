@@ -18,9 +18,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
-        
-        
-        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -61,11 +58,12 @@ extension UINavigationController {
 
      - parameter vc: root view controller to set a new
      */
-    func initRootViewController(vc: UIViewController, transitionType type: String = "kCATransitionFade", duration: CFTimeInterval = 0.3) {
-        self.addTransition(transitionType: type, duration: duration)
+    func initRootViewController(vc: UIViewController) {
+//        self.addTransition(transitionType: type, duration: duration)
         self.viewControllers.removeAll()
         self.pushViewController(vc, animated: false)
         self.popToRootViewController(animated: false)
+        print("ViewController Rest")
     }
 
     /**

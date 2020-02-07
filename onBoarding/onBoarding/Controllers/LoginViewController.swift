@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
         /// logInButton and constraints decelaration
         view.addSubview(logInButtonContiner)
         
-       
+        
     }
     
     // MARK: -> UILABEL
@@ -41,8 +41,8 @@ class LoginViewController: UIViewController {
     lazy var logoWordContainer: UILabel = {
         // `CGRect(x: 10, y: 100, width: 200, height: 200)` label test size
         let logoWord = MdCustomLabel(title: "B O X", framee: CGRect(x: 0, y: 100, width: self.view.frame.size.width, height: 200), bgcolor: .systemPink, textColorr: .white, alignment: .center, textSize: UIFont(name: "Arial", size: 70)!)
-            
-
+        
+        
         return logoWord
         
     }()
@@ -81,12 +81,24 @@ class LoginViewController: UIViewController {
     // MARK: -> UIButton
     
     lazy var logInButtonContiner: UIButton = {
-      
-        let logInButton = MdCustomButton(framee: CGRect(x: 25, y: 700, width: 360, height: 100), bg: .systemYellow, title: "LOGIN", titleState: .normal, layer: CGFloat(20) )
-       
+        
+        let logInButton = MdCustomButton(framee: CGRect(x: 25, y: 700, width: 360, height: 100), bg: .systemYellow, title: "LOGIN", titleColor: .black , titleState: .normal, layer: CGFloat(20) )
+        logInButton.isUserInteractionEnabled = true
+        logInButton.addTarget(self, action: #selector(logInButtonPress), for: .touchUpInside)
+        
         return logInButton
         
     }()
+    
+    
+    @objc func logInButtonPress() {
+        // perform Segue to the nextView Controller
+        
+        print("Seguing .... ")
+        let mainHomeViewController = MainHomeViewController()
+        navigationController?.pushViewController(mainHomeViewController, animated: true)
+        
+    }
     
     
     

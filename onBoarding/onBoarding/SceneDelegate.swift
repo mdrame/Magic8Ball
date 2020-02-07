@@ -62,7 +62,7 @@ extension UINavigationController {
 //        self.addTransition(transitionType: type, duration: duration)
         self.viewControllers.removeAll()
         self.pushViewController(vc, animated: false)
-        self.popToRootViewController(animated: false)
+        self.popToRootViewController(animated: true)
         print("ViewController Rest")
     }
 

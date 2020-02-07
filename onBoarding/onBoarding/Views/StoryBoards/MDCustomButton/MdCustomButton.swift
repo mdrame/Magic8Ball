@@ -11,12 +11,13 @@ import UIKit
 class MdCustomButton: UIButton {
 
  // CustomClassProperties
-    required init(framee: CGRect, bg: UIColor, title: String?, titleState: UIControl.State, layer: CGFloat) {
+    required init(framee: CGRect, bg: UIColor, title: String?, titleColor: UIColor?, titleState: UIControl.State, layer: CGFloat) {
          super.init(frame: framee)
    
         self.frame =  frame
         self.backgroundColor = bg
         self.setTitle(title, for: titleState)
+        self.setTitleColor(titleColor, for: .normal)
         //styling
         self.layer.cornerRadius = layer
   

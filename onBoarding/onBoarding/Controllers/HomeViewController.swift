@@ -400,13 +400,7 @@ class HomeViewController: UIViewController {
     
     
     
-    
-    
-    
-    
-    
-    
-    
+ 
     
 }
 

@@ -24,6 +24,9 @@ class MainHomeViewController: UIViewController {
         
         /// This function creates and add mainTableview to view
         tableViewCalls()
+        
+        
+        
     }
     
     
@@ -33,7 +36,7 @@ class MainHomeViewController: UIViewController {
     func tableViewCalls() {
         // adding tableView to view
         view.addSubview(tableViewContainer)
-//        tableViewConstraints()
+        //        tableViewConstraints()
         // table view delegate and datasource
         tableViewContainer.delegate = self
         tableViewContainer.dataSource = self
@@ -46,14 +49,16 @@ class MainHomeViewController: UIViewController {
         
         
         
+        
     }
     
     // creating tableview
     lazy var tableViewContainer: UITableView = {
         
-        let mainTableView = UITableView(frame: CGRect(x: 0, y: 250, width: self.view.frame.size.width, height: self.view.frame.size.height))
-                mainTableView.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        
+        let mainTableView = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
+        mainTableView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        mainTableView.separatorInset =  UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        mainTableView.separatorStyle = .none
         
         return mainTableView
         
@@ -79,7 +84,6 @@ class MainHomeViewController: UIViewController {
     
     
     
-    
 }
 
 
@@ -87,7 +91,7 @@ class MainHomeViewController: UIViewController {
 extension MainHomeViewController : UITableViewDataSource , UITableViewDelegate {
     
     
-
+    
     
     // MARK: -> Tableview Protocles & Delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -96,9 +100,34 @@ extension MainHomeViewController : UITableViewDataSource , UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomeUITableViewCell
         cell.setUI(object: db[indexPath.row])
-//        cell?.textLabel?.text = "Test"
+        //        cell?.textLabel?.text = "Test"
+        cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         return cell
     }
+    
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.allowsSelection = false
+    }
+    
+    
+    
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let myLabel = UILabel(frame: CGRect(x: 20, y: 0, width: 200 , height: 30))
+//        myLabel.backgroundColor = .systemPink
+        myLabel.font = UIFont.boldSystemFont(ofSize: 25)
+        myLabel.text = "H O M E"
+        
+        let headerView = UIView()
+        headerView.backgroundColor = .white
+        headerView.addSubview(myLabel)
+        
+        return headerView
+    }
+    
     
     
     

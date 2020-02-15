@@ -44,7 +44,7 @@ class MainHomeViewController: UIViewController {
         tableViewContainer.rowHeight =  150
         /// adding constraints to tableView
         //        tableViewConstraints()
-        tableViewContainer.register(CustomeUITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableViewContainer.register(CustomeUITableViewCell.self, forCellReuseIdentifier: CustomeUITableViewCell.cell)
         
         
         
@@ -108,7 +108,9 @@ extension MainHomeViewController : UITableViewDataSource , UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.allowsSelection = false
+//        tableView.allowsSelection = false
+        let boxDetailViewController = BoxDetailViewController()
+        present(boxDetailViewController, animated: true, completion: nil)
     }
     
     

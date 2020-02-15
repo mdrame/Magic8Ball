@@ -380,17 +380,20 @@ class HomeViewController: UIViewController {
         
     }()
     
-    
-    
-    
-    
+ 
     /// This functions run when user press the login button on the last scrollview window, This function segue to the login viewcontroller, and also reset the navigation stack, by remove the onboarding vc from the navigation stack.
     @objc func logInButtonPressed() {
         
         print("Seguing .... ")
         
-        self.navigationController?.initRootViewController(vc: LoginViewController())
+        let vc = LoginViewController()
+        navigationController?.pushViewController(vc, animated: true)
         
+        
+        
+        
+//        self.navigationController?.initRootViewController(vc: LoginViewController())
+//
         
         
         

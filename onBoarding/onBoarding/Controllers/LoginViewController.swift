@@ -95,8 +95,8 @@ class LoginViewController: UIViewController {
         // perform Segue to the nextView Controller
         
         print("Seguing .... ")
-        let mainHomeViewController = MainHomeViewController()
-        navigationController?.pushViewController(mainHomeViewController, animated: true)
+       let categoryViewController = CategoryViewController()
+        show(categoryViewController, sender: self)
         
     }
     

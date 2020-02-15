@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		771474A823F2274E00369F66 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771474A723F2274E00369F66 /* Images.swift */; };
+		771474AA23F320A500369F66 /* BoxDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771474A923F320A500369F66 /* BoxDetailViewController.swift */; };
 		7716F47C23E4D0AE00186C2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7716F47B23E4D0AE00186C2E /* AppDelegate.swift */; };
 		7716F47E23E4D0AE00186C2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7716F47D23E4D0AE00186C2E /* SceneDelegate.swift */; };
 		7716F48323E4D0AE00186C2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7716F48123E4D0AE00186C2E /* Main.storyboard */; };
 		7716F48523E4D0AF00186C2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7716F48423E4D0AF00186C2E /* Assets.xcassets */; };
 		7716F48823E4D0AF00186C2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7716F48623E4D0AF00186C2E /* LaunchScreen.storyboard */; };
 		7716F49023E4D4A400186C2E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7716F48F23E4D4A400186C2E /* HomeViewController.swift */; };
+		7732384A23F771930016A8EF /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7732384923F771930016A8EF /* CategoryViewController.swift */; };
 		778704E623ED2F41007264E7 /* CustomeUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778704E523ED2F41007264E7 /* CustomeUITableViewCell.swift */; };
 		778980FB23E9FC79004DE4DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778980FA23E9FC79004DE4DB /* LoginViewController.swift */; };
 		7789810023EB8C5C004DE4DB /* MdCustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778980FF23EB8C5C004DE4DB /* MdCustomLabel.swift */; };
@@ -25,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		771474A723F2274E00369F66 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		771474A923F320A500369F66 /* BoxDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxDetailViewController.swift; sourceTree = "<group>"; };
 		7716F47823E4D0AD00186C2E /* onBoarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onBoarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7716F47B23E4D0AE00186C2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7716F47D23E4D0AE00186C2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +36,7 @@
 		7716F48723E4D0AF00186C2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7716F48923E4D0AF00186C2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7716F48F23E4D4A400186C2E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7732384923F771930016A8EF /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		778704E523ED2F41007264E7 /* CustomeUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeUITableViewCell.swift; sourceTree = "<group>"; };
 		778980FA23E9FC79004DE4DB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		778980FF23EB8C5C004DE4DB /* MdCustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MdCustomLabel.swift; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 				7716F48F23E4D4A400186C2E /* HomeViewController.swift */,
 				778980FA23E9FC79004DE4DB /* LoginViewController.swift */,
 				7789810A23EBA73A004DE4DB /* MainHomeViewController.swift */,
+				7732384923F771930016A8EF /* CategoryViewController.swift */,
+				771474A923F320A500369F66 /* BoxDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -236,7 +242,9 @@
 				778704E623ED2F41007264E7 /* CustomeUITableViewCell.swift in Sources */,
 				7789810623EB91C0004DE4DB /* TestClass.swift in Sources */,
 				7789810023EB8C5C004DE4DB /* MdCustomLabel.swift in Sources */,
+				7732384A23F771930016A8EF /* CategoryViewController.swift in Sources */,
 				7789810923EB9676004DE4DB /* MdCustomButton.swift in Sources */,
+				771474AA23F320A500369F66 /* BoxDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

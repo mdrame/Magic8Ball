@@ -8,12 +8,10 @@
 
 import Foundation
 
-class Images {
+struct Images {
     
     
     var imageOne = String()
     
-    init(imageOne: String) {
-        self.imageOne = imageOne
-    }
+    
 }

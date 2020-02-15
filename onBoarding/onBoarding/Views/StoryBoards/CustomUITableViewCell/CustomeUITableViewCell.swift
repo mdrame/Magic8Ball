@@ -9,11 +9,20 @@
 import UIKit
 
 class CustomeUITableViewCell: UITableViewCell {
+    
+    // MARK: -> Global Variables
+    static let cell = "cell"
         
     // MARK: -> Outlets
     
     let cellImage = UIImageView(frame: CGRect(x: 150, y: 20, width: 100, height: 100) )
     
+    
+    func cellCalls() {
+        addSubview(cellImage)
+               cellImage.translatesAutoresizingMaskIntoConstraints = false
+               self.cellImageStyling()
+    }
 
     
     
@@ -23,10 +32,8 @@ class CustomeUITableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         // Adding Image and Label as subviews to the tableview cell
-        addSubview(cellImage)
-        cellImage.translatesAutoresizingMaskIntoConstraints = false
-        self.cellImageStyling()
-      
+       
+      cellCalls()
         
         
         
@@ -35,7 +42,7 @@ class CustomeUITableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+        cellCalls()
     }
     
     
@@ -43,7 +50,7 @@ class CustomeUITableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
-        
+        cellCalls()
     }
     
     

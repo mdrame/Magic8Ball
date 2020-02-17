@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
     // MARK: -> Global Varibale
     
     
-    // I'm counting the photo instead of a imageview array because then i'm certain that I'got pacture in all my imageView
+    // I'm counting the photo instead of a imageview array because then i'm certain that I'got picture in all my imageView
     let pageImagesArray = ["one", "two", "three"]
     
     /// Property Observer that changes both nunber of page and currentpage, reason for that is to make sure that our pageImagesArray arent been temper with.

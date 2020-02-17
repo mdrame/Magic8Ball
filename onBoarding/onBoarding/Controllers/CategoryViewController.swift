@@ -73,14 +73,24 @@ class CategoryViewController: UIViewController {
     // MARK: -> Box Buttons Calls
     
     func buttonsCall() {
-        bodyViewcontainer.addSubview(categoryBoxContainer)
-        buttonConstraints()
+        // First Button and constraint in continer
+        bodyViewcontainer.addSubview(buttonOneContainer)
+        buttonOneConstraints()
+        
+        // First Button and constraint in continer
+        bodyViewcontainer.addSubview(buttonTwoContainer)
+               buttonTwoConstraints()
+        
+        // First Button and constraint in continer
+        bodyViewcontainer.addSubview(buttonThreeContainer)
+               buttonThreeConstraints()
     }
     
     
     // MARK: -> Category Boxes
     
-    lazy var categoryBoxContainer : UIButton = {
+    /// Button one of three in bodyViewContainer
+    lazy var buttonOneContainer : UIButton = {
        
         let boxButton = UIButton(frame: .zero)
         boxButton.backgroundColor = .green
@@ -89,22 +99,77 @@ class CategoryViewController: UIViewController {
             
     }()
     
-    func buttonConstraints() {
+    func buttonOneConstraints() {
 
         NSLayoutConstraint.activate([
             // center in bodyviwe container
-            categoryBoxContainer.centerXAnchor.constraint(equalTo: bodyViewcontainer.centerXAnchor),
+            buttonOneContainer.centerXAnchor.constraint(equalTo: bodyViewcontainer.centerXAnchor),
             // top ancher
-            categoryBoxContainer.topAnchor.constraint(equalTo: bodyViewcontainer.topAnchor, constant: 10),
+            buttonOneContainer.topAnchor.constraint(equalTo: bodyViewcontainer.topAnchor, constant: 20),
             // height and width
-            categoryBoxContainer.heightAnchor.constraint(equalToConstant: self.bodyViewcontainer.frame.size.height / 4),
-            categoryBoxContainer.widthAnchor.constraint(equalToConstant: self.bodyViewcontainer.frame.size.width / 2),
+            buttonOneContainer.heightAnchor.constraint(equalToConstant: self.bodyViewcontainer.frame.size.height / 4),
+            buttonOneContainer.widthAnchor.constraint(equalToConstant: self.bodyViewcontainer.frame.size.width / 2),
             
         ])
 
 
     }
-//
+
+    
+    /// Button two of three in bodyViewContainer
+       lazy var buttonTwoContainer : UIButton = {
+          
+           let boxButton = UIButton(frame: .zero)
+           boxButton.backgroundColor = .blue
+           boxButton.translatesAutoresizingMaskIntoConstraints = false
+           return boxButton
+               
+       }()
+       
+       func buttonTwoConstraints() {
+
+           NSLayoutConstraint.activate([
+               // center in bodyviwe container
+               buttonTwoContainer.centerXAnchor.constraint(equalTo: bodyViewcontainer.centerXAnchor),
+               buttonTwoContainer.centerYAnchor.constraint(equalTo: bodyViewcontainer.centerYAnchor),
+               // top ancher
+            
+//               buttonTwoContainer.topAnchor.constraint(equalTo: bodyViewcontainer.topAnchor, constant: 10),
+               // height and width
+               buttonTwoContainer.heightAnchor.constraint(equalToConstant: self.bodyViewcontainer.frame.size.height / 4),
+               buttonTwoContainer.widthAnchor.constraint(equalToConstant: self.bodyViewcontainer.frame.size.width / 2),
+               
+           ])
+
+
+       }
+    
+    
+    /// Button three of three in bodyViewContainer
+       lazy var buttonThreeContainer : UIButton = {
+          
+           let boxButton = UIButton(frame: .zero)
+           boxButton.backgroundColor = .black
+           boxButton.translatesAutoresizingMaskIntoConstraints = false
+           return boxButton
+               
+       }()
+       
+       func buttonThreeConstraints() {
+
+           NSLayoutConstraint.activate([
+               // center in bodyviwe container
+               buttonThreeContainer.centerXAnchor.constraint(equalTo: bodyViewcontainer.centerXAnchor),
+               // top ancher
+               buttonThreeContainer.bottomAnchor.constraint(equalTo: buttonTwoContainer.bottomAnchor, constant: 180),
+               // height and width
+               buttonThreeContainer.heightAnchor.constraint(equalToConstant: self.bodyViewcontainer.frame.size.height / 4),
+               buttonThreeContainer.widthAnchor.constraint(equalToConstant: self.bodyViewcontainer.frame.size.width / 2),
+               
+           ])
+
+
+       }
     
     
     

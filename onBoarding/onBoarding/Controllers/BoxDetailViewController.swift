@@ -16,8 +16,18 @@ class BoxDetailViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemYellow
         // Do any additional setup after loading the view.
+        
+        
+        
+        
        
     }
+    
+    
+    
+    
+    
+
     
     
 

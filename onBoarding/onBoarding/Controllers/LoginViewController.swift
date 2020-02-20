@@ -95,8 +95,8 @@ class LoginViewController: UIViewController {
         // perform Segue to the nextView Controller
         
         print("Seguing .... ")
-       let categoryViewController = CategoryViewController()
-        show(categoryViewController, sender: self)
+       let tabBarController = TabBarHome()
+        self.present(tabBarController, animated: true, completion: nil)
         
     }
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		770B7C6223FF1C5400C25197 /* TabBarHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770B7C6123FF1C5400C25197 /* TabBarHome.swift */; };
 		771474A823F2274E00369F66 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771474A723F2274E00369F66 /* Images.swift */; };
 		771474AA23F320A500369F66 /* BoxDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771474A923F320A500369F66 /* BoxDetailViewController.swift */; };
 		7716F47C23E4D0AE00186C2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7716F47B23E4D0AE00186C2E /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		770B7C6123FF1C5400C25197 /* TabBarHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarHome.swift; sourceTree = "<group>"; };
 		771474A723F2274E00369F66 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		771474A923F320A500369F66 /* BoxDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxDetailViewController.swift; sourceTree = "<group>"; };
 		7716F47823E4D0AD00186C2E /* onBoarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onBoarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,9 +103,10 @@
 			children = (
 				7716F48F23E4D4A400186C2E /* HomeViewController.swift */,
 				778980FA23E9FC79004DE4DB /* LoginViewController.swift */,
+				770B7C6123FF1C5400C25197 /* TabBarHome.swift */,
+				771474A923F320A500369F66 /* BoxDetailViewController.swift */,
 				7789810A23EBA73A004DE4DB /* MainHomeViewController.swift */,
 				7732384923F771930016A8EF /* CategoryViewController.swift */,
-				771474A923F320A500369F66 /* BoxDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			files = (
 				7789810423EB9114004DE4DB /* MdCustomImageView.swift in Sources */,
 				7789810B23EBA73A004DE4DB /* MainHomeViewController.swift in Sources */,
+				770B7C6223FF1C5400C25197 /* TabBarHome.swift in Sources */,
 				778980FB23E9FC79004DE4DB /* LoginViewController.swift in Sources */,
 				771474A823F2274E00369F66 /* Images.swift in Sources */,
 				7716F47C23E4D0AE00186C2E /* AppDelegate.swift in Sources */,

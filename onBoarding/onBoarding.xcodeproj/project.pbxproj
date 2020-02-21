@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		770B7C6223FF1C5400C25197 /* TabBarHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770B7C6123FF1C5400C25197 /* TabBarHome.swift */; };
+		770B7C6523FF78E000C25197 /* MDCustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770B7C6423FF78E000C25197 /* MDCustomCollectionViewCell.swift */; };
 		771474A823F2274E00369F66 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771474A723F2274E00369F66 /* Images.swift */; };
 		771474AA23F320A500369F66 /* BoxDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771474A923F320A500369F66 /* BoxDetailViewController.swift */; };
 		7716F47C23E4D0AE00186C2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7716F47B23E4D0AE00186C2E /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		770B7C6123FF1C5400C25197 /* TabBarHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarHome.swift; sourceTree = "<group>"; };
+		770B7C6423FF78E000C25197 /* MDCustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDCustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		771474A723F2274E00369F66 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		771474A923F320A500369F66 /* BoxDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxDetailViewController.swift; sourceTree = "<group>"; };
 		7716F47823E4D0AD00186C2E /* onBoarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onBoarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		770B7C6323FF789B00C25197 /* CustomCollectionViewClass */ = {
+			isa = PBXGroup;
+			children = (
+				770B7C6423FF78E000C25197 /* MDCustomCollectionViewCell.swift */,
+			);
+			path = CustomCollectionViewClass;
+			sourceTree = "<group>";
+		};
 		7716F46F23E4D0AD00186C2E = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +153,7 @@
 				7789810223EB90D6004DE4DB /* MDCustomImageView */,
 				778980FE23EB8C33004DE4DB /* MDCustomLabel */,
 				778704E423ED2DCE007264E7 /* CustomUITableViewCell */,
+				770B7C6323FF789B00C25197 /* CustomCollectionViewClass */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -246,6 +257,7 @@
 				778704E623ED2F41007264E7 /* CustomeUITableViewCell.swift in Sources */,
 				7789810623EB91C0004DE4DB /* TestClass.swift in Sources */,
 				7789810023EB8C5C004DE4DB /* MdCustomLabel.swift in Sources */,
+				770B7C6523FF78E000C25197 /* MDCustomCollectionViewCell.swift in Sources */,
 				7732384A23F771930016A8EF /* CategoryViewController.swift in Sources */,
 				7789810923EB9676004DE4DB /* MdCustomButton.swift in Sources */,
 				771474AA23F320A500369F66 /* BoxDetailViewController.swift in Sources */,

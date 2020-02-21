@@ -8,14 +8,13 @@
 
 import UIKit
 
-class BoxDetailViewController: UIViewController {
+class CollectionViewHomeVC: UIViewController {
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemYellow
-        
         collectionViewContiner.delegate = self
         collectionViewContiner.dataSource = self
         
@@ -42,38 +41,39 @@ class BoxDetailViewController: UIViewController {
     
     
     
+    
     func collectionViewConstrain() {
-       
+        
         NSLayoutConstraint.activate([
-            collectionViewContiner.topAnchor.constraint(equalTo: view.topAnchor),
+            collectionViewContiner.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: 5),
             collectionViewContiner.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            collectionViewContiner.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            collectionViewContiner.heightAnchor.constraint(equalToConstant: self.view.frame.size.height / 3),
             collectionViewContiner.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
         
         
     }
     
-  
-}
+    
+} // VC Ends here
 
 
-extension BoxDetailViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout  {
+extension CollectionViewHomeVC: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout  {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-           return 20
-       }
-       
-       func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MDCustomCollectionViewCell.cellIdentifier, for: indexPath) as! MDCustomCollectionViewCell
-           cell.contentView.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
-           return cell
-       }
-       
-       func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-           return CGSize(width: view.frame.size.width / 2, height: 200)
-       }
-       
+        return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MDCustomCollectionViewCell.cellIdentifier, for: indexPath) as! MDCustomCollectionViewCell
+        cell.contentView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.size.width / 2.5, height: 230)
+    }
+    
     
     
     

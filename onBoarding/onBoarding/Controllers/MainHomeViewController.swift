@@ -107,30 +107,30 @@ extension MainHomeViewController : UITableViewDataSource , UITableViewDelegate {
     
     
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.allowsSelection = false
-        let boxDetailViewController = BoxDetailViewController()
-        present(boxDetailViewController, animated: true, completion: nil)
-    }
-    
-    
-    
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        let myLabel = UILabel(frame: CGRect(x: 20, y: 0, width: 200 , height: 30))
-//        myLabel.backgroundColor = .systemPink
-        myLabel.font = UIFont.boldSystemFont(ofSize: 25)
-        myLabel.text = "H O M E"
-        
-        let headerView = UIView()
-        headerView.backgroundColor = .white
-        headerView.addSubview(myLabel)
-        
-        return headerView
-    }
-    
-    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+////        tableView.allowsSelection = false
+//        let boxDetailViewController = CollectionViewHomeVC()
+//        present(boxDetailViewController, animated: true, completion: nil)
+//    }
+//
+//
+//
+//
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//
+//        let myLabel = UILabel(frame: CGRect(x: 20, y: 0, width: 200 , height: 30))
+////        myLabel.backgroundColor = .systemPink
+//        myLabel.font = UIFont.boldSystemFont(ofSize: 25)
+//        myLabel.text = "H O M E"
+//
+//        let headerView = UIView()
+//        headerView.backgroundColor = .white
+//        headerView.addSubview(myLabel)
+//
+//        return headerView
+//    }
+//
+//
     
     
     

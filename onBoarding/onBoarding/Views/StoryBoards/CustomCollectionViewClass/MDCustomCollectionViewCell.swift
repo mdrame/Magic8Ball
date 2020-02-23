@@ -8,11 +8,10 @@
 
 import UIKit
 
-class MDCustomCollectionViewCell: UICollectionViewCell {
+class MDCustomCollectionViewCell: UICollectionViewCell,  UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     // Properties
     static var cellIdentifier = "CustomeCell"
-    
     
     // Outlets
     // Image view in the content view
@@ -21,11 +20,17 @@ class MDCustomCollectionViewCell: UICollectionViewCell {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds =  true
+<<<<<<< HEAD
 //        imageView.image = #imageLiteral(resourceName: "one")
         imageView.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
         imageView.contentMode = .scaleAspectFit
         imageView.layer.cornerRadius =  10
         imageView.layer.masksToBounds = true
+=======
+        imageView.backgroundColor = .green
+        imageView.image = #imageLiteral(resourceName: "one")
+        imageView.layer.cornerRadius = 15
+>>>>>>> e84c6dc7c6d3a92570899052ef7fc7809901a96b
         return imageView
     }()
     
@@ -38,9 +43,14 @@ class MDCustomCollectionViewCell: UICollectionViewCell {
         
         
         contentView.addSubview(collectionImage)
+<<<<<<< HEAD
         imageAndLabelSetUp()
         //        contentView.addSubview(collectionLabel)
         
+=======
+        viewsConstratins()
+//        contentView.addSubview(collectionLabel)
+>>>>>>> e84c6dc7c6d3a92570899052ef7fc7809901a96b
         
         
     }
@@ -58,7 +68,7 @@ class MDCustomCollectionViewCell: UICollectionViewCell {
     
     // image and label set up
     // change function to adopt to a data model
-    func imageAndLabelSetUp() {
+    func viewsConstratins() {
         
         
         
@@ -85,8 +95,29 @@ class MDCustomCollectionViewCell: UICollectionViewCell {
     
     
     
-    
-    // Set UI
+    // MARK: -> Collection View Delegate and Data Source.
+     
+ //        func numberOfSections(in collectionView: UICollectionView) -> Int {
+ //            2
+ //        }
+     
+     
+     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+         return 20
+     }
+     
+     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MDCustomCollectionViewCell.cellIdentifier, for: indexPath) as! MDCustomCollectionViewCell
+         cell.contentView.backgroundColor = .orange
+         return cell
+     }
+     
+     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.frame.size.width / 4, height: 250)
+        
+    }
+     
+     
     
     
     

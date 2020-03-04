@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionViewHomeVC: UIViewController {
+class BoxDetailViewController: UIViewController {
     
     
     // Database of Image objects
@@ -22,6 +22,7 @@ class CollectionViewHomeVC: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .systemYellow
+        
         collectionViewContiner.delegate = self
         collectionViewContiner.dataSource = self
         //
@@ -60,7 +61,6 @@ class CollectionViewHomeVC: UIViewController {
     
     // MainTableView
     
-<<<<<<< HEAD
     lazy var tableViewContainer: UITableView = {
         
         let mainTableView = UITableView(frame: .zero)
@@ -71,17 +71,6 @@ class CollectionViewHomeVC: UIViewController {
         //        mainTableView.separatorInset =  UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         //        mainTableView.contentSize = CGSize(width: self.view.frame.size.width, height: 100)
         mainTableView.rowHeight = 200
-=======
-    
-    func collectionViewConstrain() {
-        
-        NSLayoutConstraint.activate([
-            collectionViewContiner.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: 5),
-            collectionViewContiner.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            collectionViewContiner.heightAnchor.constraint(equalToConstant: self.view.frame.size.height / 3),
-            collectionViewContiner.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
->>>>>>> e84c6dc7c6d3a92570899052ef7fc7809901a96b
         
         mainTableView.separatorStyle = .singleLine
         
@@ -103,7 +92,6 @@ class CollectionViewHomeVC: UIViewController {
     }
     
     
-<<<<<<< HEAD
     
     
 }
@@ -114,29 +102,15 @@ extension BoxDetailViewController: UICollectionViewDataSource, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 200
-=======
-} // VC Ends here
-
-
-extension CollectionViewHomeVC: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout  {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
->>>>>>> e84c6dc7c6d3a92570899052ef7fc7809901a96b
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MDCustomCollectionViewCell.cellIdentifier, for: indexPath) as! MDCustomCollectionViewCell
-<<<<<<< HEAD
         cell.contentView.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
-=======
-        cell.contentView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
->>>>>>> e84c6dc7c6d3a92570899052ef7fc7809901a96b
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-<<<<<<< HEAD
         return CGSize(width: view.frame.size.width / 2.5, height: 195)
     }
     
@@ -253,11 +227,6 @@ extension BoxDetailViewController : UITableViewDataSource , UITableViewDelegate{
     
     
     
-=======
-        return CGSize(width: view.frame.size.width / 2.5, height: 230)
-    }
-    
->>>>>>> e84c6dc7c6d3a92570899052ef7fc7809901a96b
     
     
     

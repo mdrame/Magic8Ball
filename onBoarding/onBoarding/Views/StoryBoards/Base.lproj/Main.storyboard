@@ -53,9 +53,6 @@
                         <viewLayoutGuide key="safeArea" id="JAf-Vz-bpL"/>
                     </view>
                     <navigationItem key="navigationItem" id="CyG-IY-RQ2"/>
-                    <connections>
-                        <segue destination="mfy-5V-eu1" kind="show" id="UaX-Yw-IRn"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dAi-h0-aaC" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,11 +74,11 @@
             </objects>
             <point key="canvasLocation" x="4070" y="25"/>
         </scene>
-        <!--Collection HomeVC-->
+        <!--Category View Controller-->
         <scene sceneID="IgE-5D-d1o">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u5n-Ow-bpK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="category" id="b6i-I3-ioR" customClass="CollectionHomeVC" customModule="onBoarding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="category" id="b6i-I3-ioR" customClass="CategoryViewController" customModule="onBoarding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qZn-8H-4fV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

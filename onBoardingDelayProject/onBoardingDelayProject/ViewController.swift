@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  DelayOnBoarding
+//  onBoardingDelayProject
 //
 //  Created by Mohammed Drame on 3/11/20.
 //  Copyright © 2020 Mo Drame. All rights reserved.

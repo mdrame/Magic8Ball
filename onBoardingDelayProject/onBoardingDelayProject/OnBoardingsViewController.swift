@@ -331,6 +331,11 @@ class OnBoardingsViewController: UIViewController {
     /// This functions run when user press the login button on the last scrollview window, This function segue to the login viewcontroller, and also reset the navigation stack, by remove the onboarding vc from the navigation stack.
     @objc func logInButtonPressed() {
         print("Seguing .... ")
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let nextVC = mainStoryboard.instantiateViewController(withIdentifier: "logInViewController") as? LogInViewController else {
+          return print("storyboard not set up correctly, check the identity of \"nextVC\"")
+        }
+        present(nextVC, animated: true, completion: nil)
     }
     
     

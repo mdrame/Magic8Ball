@@ -13,6 +13,7 @@
 		77B1DDA42419813C00E3F76C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77B1DDA32419813C00E3F76C /* Assets.xcassets */; };
 		77B1DDA72419813C00E3F76C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B1DDA52419813C00E3F76C /* LaunchScreen.storyboard */; };
 		77B1DDCA24198C8500E3F76C /* OnBoardingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B1DDC924198C8500E3F76C /* OnBoardingsViewController.swift */; };
+		77B1DDCC241AC78100E3F76C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B1DDCB241AC78100E3F76C /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		77B1DDA62419813C00E3F76C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77B1DDA82419813C00E3F76C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77B1DDC924198C8500E3F76C /* OnBoardingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingsViewController.swift; sourceTree = "<group>"; };
+		77B1DDCB241AC78100E3F76C /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				77B1DDC924198C8500E3F76C /* OnBoardingsViewController.swift */,
+				77B1DDCB241AC78100E3F76C /* LogInViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77B1DDCC241AC78100E3F76C /* LogInViewController.swift in Sources */,
 				77B1DDCA24198C8500E3F76C /* OnBoardingsViewController.swift in Sources */,
 				77B1DD9B2419813B00E3F76C /* AppDelegate.swift in Sources */,
 				77B1DD9D2419813B00E3F76C /* SceneDelegate.swift in Sources */,

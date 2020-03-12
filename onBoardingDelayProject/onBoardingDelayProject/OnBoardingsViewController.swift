@@ -348,12 +348,15 @@ extension OnBoardingsViewController: UIScrollViewDelegate {
         if scrollView.contentOffset == CGPoint(x: 0, y: 0) {
             /// Returns the current page number to scrollViewCurrentPage property observer
             scrollViewCurrentPage = 0
+            pageControl.currentPage = scrollViewCurrentPage
             
         } else if scrollView.contentOffset == CGPoint(x: self.view.frame.size.width, y: 0) {
             scrollViewCurrentPage = 1
+            pageControl.currentPage = scrollViewCurrentPage
             
         } else if scrollView.contentOffset == CGPoint(x: self.view.frame.size.width * 2, y: 0) {
             scrollViewCurrentPage = 2
+            pageControl.currentPage = scrollViewCurrentPage
             
         }
         

@@ -18,13 +18,13 @@ class OnBoardingsViewController: UIViewController {
     
     // 3. Give three UIViews different colors ✅
     
-    // 4. Create UIPageControl
+    // 4. Create UIPageControl ✅
     
-    // 5. Set PageControl values to center of each view in scroll view
+    // 5. Set PageControl values to center of each view in scroll view ✅
     
-    // 6. Add Continue button to last view in scrollview
+    // 6. Add Continue button to last view in scrollview ✅
     
-    // 8. when button press, segegue to LogInViewController
+    // 8. when button press, segegue to LogInViewController ✅
     
     
     // MARK: -> Global Varibale

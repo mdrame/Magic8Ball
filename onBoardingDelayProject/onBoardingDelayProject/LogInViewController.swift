@@ -123,7 +123,11 @@ class LogInViewController: UIViewController {
     }()
     
     @objc func logInPressed() {
-        print("User loged in")
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let nextVC = mainStoryboard.instantiateViewController(withIdentifier: "homevc") as? HomeViewController else {
+            return print("storyboard not set up correctly")
+        }
+        present(nextVC, animated: true, completion: nil)
     }
     
     func logInButtonConstrain() {

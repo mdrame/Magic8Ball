@@ -124,7 +124,7 @@ class LogInViewController: UIViewController {
     
     @objc func logInPressed() {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let nextVC = mainStoryboard.instantiateViewController(withIdentifier: "homevc") as? HomeViewController else {
+        guard let nextVC = mainStoryboard.instantiateViewController(withIdentifier: "HomeNavigationController") as? HomeUINavigationController else {
             return print("storyboard not set up correctly")
         }
         present(nextVC, animated: true, completion: nil)

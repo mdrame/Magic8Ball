@@ -15,6 +15,7 @@
 		77B1DDCA24198C8500E3F76C /* OnBoardingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B1DDC924198C8500E3F76C /* OnBoardingsViewController.swift */; };
 		77B1DDCC241AC78100E3F76C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B1DDCB241AC78100E3F76C /* LogInViewController.swift */; };
 		77FF35A5242D490C00CB9A25 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF35A4242D490C00CB9A25 /* HomeViewController.swift */; };
+		77FF35A7242EC74200CB9A25 /* HomeUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF35A6242EC74200CB9A25 /* HomeUINavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		77B1DDC924198C8500E3F76C /* OnBoardingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingsViewController.swift; sourceTree = "<group>"; };
 		77B1DDCB241AC78100E3F76C /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		77FF35A4242D490C00CB9A25 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		77FF35A6242EC74200CB9A25 /* HomeUINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUINavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			children = (
 				77B1DDC924198C8500E3F76C /* OnBoardingsViewController.swift */,
 				77B1DDCB241AC78100E3F76C /* LogInViewController.swift */,
+				77FF35A6242EC74200CB9A25 /* HomeUINavigationController.swift */,
 				77FF35A4242D490C00CB9A25 /* HomeViewController.swift */,
 			);
 			name = Controllers;
@@ -170,6 +173,7 @@
 			files = (
 				77FF35A5242D490C00CB9A25 /* HomeViewController.swift in Sources */,
 				77B1DDCC241AC78100E3F76C /* LogInViewController.swift in Sources */,
+				77FF35A7242EC74200CB9A25 /* HomeUINavigationController.swift in Sources */,
 				77B1DDCA24198C8500E3F76C /* OnBoardingsViewController.swift in Sources */,
 				77B1DD9B2419813B00E3F76C /* AppDelegate.swift in Sources */,
 				77B1DD9D2419813B00E3F76C /* SceneDelegate.swift in Sources */,

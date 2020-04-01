@@ -71,6 +71,7 @@ class HomeViewController: UIViewController {
         switch sender.tag {
         case 0:
             print("Button One")
+            performSegue(withIdentifier: "toTabBarvc", sender: self)
         case 1:
             print("Button Two")
         case 2:

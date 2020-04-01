@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tmV-sK-TVk">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -76,11 +76,11 @@
         <!--Home-->
         <scene sceneID="Dta-Uh-8U4">
             <objects>
-                <viewController id="srP-RQ-XNm" sceneMemberID="viewController">
+                <viewController id="srP-RQ-XNm" customClass="FirstTabViewController" customModule="onBoardingDelayProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Efj-lA-gCh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="GxY-Xy-NxZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="home" id="oZw-xg-WTp"/>
@@ -108,12 +108,11 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fy3-6u-B9g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3242" y="72"/>
+            <point key="canvasLocation" x="3241" y="71"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="L1e-4X-zY3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M8D-ys-FHF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="jpU-C2-vMH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Mq-ff-pno">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -124,6 +123,7 @@
                     <tabBarItem key="tabBarItem" systemItem="history" id="V2O-vx-DVN"/>
                     <navigationItem key="navigationItem" id="zQV-PN-jDW"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M8D-ys-FHF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4799" y="797"/>
         </scene>
@@ -149,7 +149,6 @@
         <!--Profile-->
         <scene sceneID="Ulw-of-OHf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eFa-jF-mzr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="kAs-sS-NDq" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5ZF-Wm-PXk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -159,6 +158,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="profile" id="Feb-tA-iHh"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eFa-jF-mzr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5622" y="797"/>
         </scene>

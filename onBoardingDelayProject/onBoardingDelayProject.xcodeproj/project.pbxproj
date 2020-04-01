@@ -16,6 +16,9 @@
 		77B1DDCC241AC78100E3F76C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B1DDCB241AC78100E3F76C /* LogInViewController.swift */; };
 		77FF35A5242D490C00CB9A25 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF35A4242D490C00CB9A25 /* HomeViewController.swift */; };
 		77FF35A7242EC74200CB9A25 /* HomeUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF35A6242EC74200CB9A25 /* HomeUINavigationController.swift */; };
+		77FF35AD243422D300CB9A25 /* FirstTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF35AC243422D300CB9A25 /* FirstTabViewController.swift */; };
+		77FF35B024343DE300CB9A25 /* CollectionVliewHeadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF35AF24343DE300CB9A25 /* CollectionVliewHeadCell.swift */; };
+		77FF35B224343E0100CB9A25 /* CollectionVIewButtomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF35B124343E0100CB9A25 /* CollectionVIewButtomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		77B1DDCB241AC78100E3F76C /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		77FF35A4242D490C00CB9A25 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		77FF35A6242EC74200CB9A25 /* HomeUINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUINavigationController.swift; sourceTree = "<group>"; };
+		77FF35AC243422D300CB9A25 /* FirstTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabViewController.swift; sourceTree = "<group>"; };
+		77FF35AF24343DE300CB9A25 /* CollectionVliewHeadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionVliewHeadCell.swift; sourceTree = "<group>"; };
+		77FF35B124343E0100CB9A25 /* CollectionVIewButtomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionVIewButtomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				77B1DDA02419813B00E3F76C /* Main.storyboard */,
+				77FF35AE24343DB200CB9A25 /* CustomCollectionCells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -96,8 +103,18 @@
 				77B1DDCB241AC78100E3F76C /* LogInViewController.swift */,
 				77FF35A6242EC74200CB9A25 /* HomeUINavigationController.swift */,
 				77FF35A4242D490C00CB9A25 /* HomeViewController.swift */,
+				77FF35AC243422D300CB9A25 /* FirstTabViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		77FF35AE24343DB200CB9A25 /* CustomCollectionCells */ = {
+			isa = PBXGroup;
+			children = (
+				77FF35AF24343DE300CB9A25 /* CollectionVliewHeadCell.swift */,
+				77FF35B124343E0100CB9A25 /* CollectionVIewButtomCell.swift */,
+			);
+			path = CustomCollectionCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +193,9 @@
 				77FF35A7242EC74200CB9A25 /* HomeUINavigationController.swift in Sources */,
 				77B1DDCA24198C8500E3F76C /* OnBoardingsViewController.swift in Sources */,
 				77B1DD9B2419813B00E3F76C /* AppDelegate.swift in Sources */,
+				77FF35B024343DE300CB9A25 /* CollectionVliewHeadCell.swift in Sources */,
+				77FF35AD243422D300CB9A25 /* FirstTabViewController.swift in Sources */,
+				77FF35B224343E0100CB9A25 /* CollectionVIewButtomCell.swift in Sources */,
 				77B1DD9D2419813B00E3F76C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

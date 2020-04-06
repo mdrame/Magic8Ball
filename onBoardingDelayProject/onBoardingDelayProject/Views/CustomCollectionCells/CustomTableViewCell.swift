@@ -17,7 +17,7 @@ class CustomTableViewCell: UITableViewCell {
         let imageToDiplay = UIImageView(frame: .zero)
 //        imageToDiplay.backgroundColor = .systemPink
         imageToDiplay.translatesAutoresizingMaskIntoConstraints = false
-        imageToDiplay.contentMode = .scaleToFill
+        imageToDiplay.contentMode = .scaleAspectFit
         // styling
         imageToDiplay.layer.cornerRadius =  10
         imageToDiplay.layer.masksToBounds = true
@@ -30,7 +30,7 @@ class CustomTableViewCell: UITableViewCell {
         labelToDisplay.translatesAutoresizingMaskIntoConstraints = false
         labelToDisplay.font = UIFont(name: "Kohinoor Bangla", size: 30)
         labelToDisplay.textAlignment = .left
-        
+        labelToDisplay.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         return labelToDisplay
     }()
     

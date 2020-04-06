@@ -10,20 +10,19 @@ import UIKit
 
 class PastBoxTablViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
    
+   
     
     // Global Var
 //    var dataBase = PastBoxModel.pastBoxData()
     func pastBoxData()->[PastBoxModel] {
-          let db = [PastBoxModel(dataImage: "one", dataLabel: "One"),
-                    PastBoxModel(dataImage: "two", dataLabel: "Two"),PastBoxModel(dataImage: "one", dataLabel: "One"),
-                    PastBoxModel(dataImage: "two", dataLabel: "Two")]
+          let db = [PastBoxModel(dataImage: "box", dataLabel: "February 2020"),
+                    PastBoxModel(dataImage: "box", dataLabel: "March 2019"),PastBoxModel(dataImage: "box", dataLabel: "June 2017"),
+                    PastBoxModel(dataImage: "box", dataLabel: "December 2021")]
           return db
       }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         // call tableView
         tableViewDelegateAndCalls()
        selfCalls()
@@ -31,7 +30,7 @@ class PastBoxTablViewController: UIViewController , UITableViewDelegate, UITable
     }
     ///Initiate VC as a NavigationController
     func selfCalls() {
-       self.title = "Test"
+       self.title = "Past Boxs"
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
@@ -88,8 +87,11 @@ class PastBoxTablViewController: UIViewController , UITableViewDelegate, UITable
         cell?.selectionStyle = .none
         // present new starViewController
         let starViewController = StarTableViewController()
-                present(starViewController, animated: true, completion: nil)
-                  print("Cell Tap")
+        starViewController.expectedTitle = pastBoxData()[indexPath.row].dataLabel
+        print(pastBoxData()[indexPath.row].dataLabel)
+        navigationController?.pushViewController(starViewController, animated: true)
+//                present(starViewController, animated: true, completion: nil)
+//                  print("Cell Tap")
         
         
     }

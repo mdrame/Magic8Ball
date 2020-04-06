@@ -9,18 +9,19 @@
 import UIKit
 
 class StarTableViewController: PastBoxTablViewController { // Inherate first viewController and override needed method
-    
+     var expectedTitle: String!
     
     //    let starVcdataBase = PastBoxModel.starBoxData()
     func starBoxData()->[PastBoxModel] {
-        let db = [PastBoxModel(dataImage: "weather", dataLabel: "Fresh Breath Dental Bond"),
-                  PastBoxModel(dataImage: "weather", dataLabel: "Fresh Breath Dental Bond"),
-                  PastBoxModel(dataImage: "weather", dataLabel: "Fresh Breath Dental Bond")]
+        let db = [PastBoxModel(dataImage: "paper", dataLabel: "Fresh Breath Dental Bond"),
+                  PastBoxModel(dataImage: "paper", dataLabel: "Fresh Breath Dental Bond"),
+                  PastBoxModel(dataImage: "paper", dataLabel: "Fresh Breath Dental Bond")]
         return db
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = expectedTitle!
         // Do any additional setup after loading the view.
     }
     

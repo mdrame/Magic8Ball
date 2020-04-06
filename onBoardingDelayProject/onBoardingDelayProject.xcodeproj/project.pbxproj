@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7707F71C243AE5A700658855 /* PastBoxTablViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7707F71B243AE5A700658855 /* PastBoxTablViewController.swift */; };
+		7707F71E243AE5F800658855 /* PastBoxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7707F71D243AE5F800658855 /* PastBoxModel.swift */; };
+		7707F720243AE64500658855 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7707F71F243AE64500658855 /* CustomTableViewCell.swift */; };
+		7707F722243AE68800658855 /* StarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7707F721243AE68800658855 /* StarTableViewController.swift */; };
+		7707F728243AEBA200658855 /* StarCustomTableVeiwCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7707F727243AEBA200658855 /* StarCustomTableVeiwCell.swift */; };
 		77B1DD9B2419813B00E3F76C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B1DD9A2419813B00E3F76C /* AppDelegate.swift */; };
 		77B1DD9D2419813B00E3F76C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B1DD9C2419813B00E3F76C /* SceneDelegate.swift */; };
 		77B1DDA22419813B00E3F76C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B1DDA02419813B00E3F76C /* Main.storyboard */; };
@@ -22,6 +27,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7707F71B243AE5A700658855 /* PastBoxTablViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastBoxTablViewController.swift; sourceTree = "<group>"; };
+		7707F71D243AE5F800658855 /* PastBoxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastBoxModel.swift; sourceTree = "<group>"; };
+		7707F71F243AE64500658855 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		7707F721243AE68800658855 /* StarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarTableViewController.swift; sourceTree = "<group>"; };
+		7707F727243AEBA200658855 /* StarCustomTableVeiwCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarCustomTableVeiwCell.swift; sourceTree = "<group>"; };
 		77B1DD972419813B00E3F76C /* onBoardingDelayProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onBoardingDelayProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B1DD9A2419813B00E3F76C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77B1DD9C2419813B00E3F76C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +93,7 @@
 		77B1DDAE241987D500E3F76C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7707F71D243AE5F800658855 /* PastBoxModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -104,6 +115,8 @@
 				77FF35A6242EC74200CB9A25 /* HomeUINavigationController.swift */,
 				77FF35A4242D490C00CB9A25 /* HomeViewController.swift */,
 				77FF35AC243422D300CB9A25 /* FirstTabViewController.swift */,
+				7707F71B243AE5A700658855 /* PastBoxTablViewController.swift */,
+				7707F721243AE68800658855 /* StarTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -113,6 +126,8 @@
 			children = (
 				77FF35AF24343DE300CB9A25 /* CollectionVliewHeadCell.swift */,
 				77FF35B124343E0100CB9A25 /* CollectionVIewButtomCell.swift */,
+				7707F71F243AE64500658855 /* CustomTableViewCell.swift */,
+				7707F727243AEBA200658855 /* StarCustomTableVeiwCell.swift */,
 			);
 			path = CustomCollectionCells;
 			sourceTree = "<group>";
@@ -188,13 +203,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7707F722243AE68800658855 /* StarTableViewController.swift in Sources */,
+				7707F71E243AE5F800658855 /* PastBoxModel.swift in Sources */,
 				77FF35A5242D490C00CB9A25 /* HomeViewController.swift in Sources */,
 				77B1DDCC241AC78100E3F76C /* LogInViewController.swift in Sources */,
 				77FF35A7242EC74200CB9A25 /* HomeUINavigationController.swift in Sources */,
+				7707F71C243AE5A700658855 /* PastBoxTablViewController.swift in Sources */,
 				77B1DDCA24198C8500E3F76C /* OnBoardingsViewController.swift in Sources */,
+				7707F720243AE64500658855 /* CustomTableViewCell.swift in Sources */,
 				77B1DD9B2419813B00E3F76C /* AppDelegate.swift in Sources */,
 				77FF35B024343DE300CB9A25 /* CollectionVliewHeadCell.swift in Sources */,
 				77FF35AD243422D300CB9A25 /* FirstTabViewController.swift in Sources */,
+				7707F728243AEBA200658855 /* StarCustomTableVeiwCell.swift in Sources */,
 				77FF35B224343E0100CB9A25 /* CollectionVIewButtomCell.swift in Sources */,
 				77B1DD9D2419813B00E3F76C /* SceneDelegate.swift in Sources */,
 			);

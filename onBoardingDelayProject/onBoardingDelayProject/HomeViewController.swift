@@ -74,6 +74,7 @@ class HomeViewController: UIViewController {
             performSegue(withIdentifier: "toTabBarvc", sender: self)
         case 1:
             print("Button Two")
+            performSegue(withIdentifier: "toPastBox", sender: self)
         case 2:
             print("Button Three")
         default:

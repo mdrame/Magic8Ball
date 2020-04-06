@@ -57,7 +57,7 @@ extension FirstTabViewController:  UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return 2 // Base on paramaid Array
+            return 1 // Base on paramaid Array
         case 1:
             return 10
         default:
@@ -81,7 +81,7 @@ extension FirstTabViewController:  UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 0 {
-        return CGSize(width: view.frame.size.width / 2.5, height: 250)
+        return CGSize(width: view.frame.size.width , height: 250)
         } else if indexPath.section == 1 {
             CGSize(width: view.frame.size.width , height: 150)
         }
@@ -91,6 +91,11 @@ extension FirstTabViewController:  UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 10, left:0 , bottom: 10, right: 0)
     }
+
+    
+    
+   
+    
     
     
     

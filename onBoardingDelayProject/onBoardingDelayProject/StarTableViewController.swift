@@ -9,7 +9,7 @@
 import UIKit
 
 class StarTableViewController: PastBoxTablViewController { // Inherate first viewController and override needed method
-     var expectedTitle: String!
+    var expectedTitle: String!
     
     //    let starVcdataBase = PastBoxModel.starBoxData()
     func starBoxData()->[PastBoxModel] {
@@ -37,42 +37,34 @@ class StarTableViewController: PastBoxTablViewController { // Inherate first vie
         cell.setUpView(object: starBoxData()[indexPath.row])
         return cell
     }
-    
-        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    var flipSwitch : Bool = false
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        flipSwitch.toggle()
+        if flipSwitch == true {
             let cell = tableView.cellForRow(at: indexPath)
             cell?.selectionStyle = .none
             cell?.accessoryType = UITableViewCell.AccessoryType.none
-             tableView.deselectRow(at: indexPath, animated: true)
-            print("Select Row")
-        }
-    
-        func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+            tableView.deselectRow(at: indexPath, animated: true)
+            print("Select Row") }
+        else if flipSwitch == false {
             let cell = tableView.cellForRow(at: indexPath)
             cell?.selectionStyle = .none
             cell?.accessoryType = UITableViewCell.AccessoryType.checkmark
-             tableView.deselectRow(at: indexPath, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
             print("DidDeSelect Row")
-}
-
-
-
-
-
-
-
-
-
-
-
-/*
- // MARK: - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
- // Get the new view controller using segue.destination.
- // Pass the selected object to the new view controller.
- }
- */
-
+        }
+    }
+    
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 

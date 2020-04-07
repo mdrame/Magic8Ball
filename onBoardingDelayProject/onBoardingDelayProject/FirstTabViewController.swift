@@ -9,9 +9,17 @@
 import UIKit
 
 class FirstTabViewController: UIViewController {
-    let dummyDataBase = ["One", "Two", "Three" , "Four"]
+  private func favorite()->[Favorite] {
+       let db = [Favorite(picture: "paper", productName: "Fresh Breth Dental Bond", category: "Treat"),
+    Favorite(picture: "paper", productName: "Fresh Breth Dental Bond", category: "Treat"),Favorite(picture: "paper", productName: "Fresh Breth Dental Bond", category: "Treat"),
+    Favorite(picture: "paper", productName: "Fresh Breth Dental Bond", category: "Treat")]
+       return db
+   }
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Home"
         view.backgroundColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
         mainCollectionView.delegate = self
         mainCollectionView.dataSource = self
@@ -27,7 +35,7 @@ class FirstTabViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         let mainCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        mainCollectionView.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        mainCollectionView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         mainCollectionView.translatesAutoresizingMaskIntoConstraints = false
         mainCollectionView.register(CollectionVliewHeadCell.self, forCellWithReuseIdentifier:  CollectionVliewHeadCell.cellIdentifier)
         mainCollectionView.register(CollectionVIewButtomCell.self, forCellWithReuseIdentifier: CollectionVIewButtomCell.cellIdentifier)
@@ -59,7 +67,7 @@ extension FirstTabViewController:  UICollectionViewDelegate, UICollectionViewDat
         case 0:
             return 1 // Base on paramaid Array
         case 1:
-            return 10
+            return favorite().count
         default:
             return 0
         }
@@ -69,9 +77,11 @@ extension FirstTabViewController:  UICollectionViewDelegate, UICollectionViewDat
         switch indexPath.section {
         case 0:
             let cell1 = mainCollectionView.dequeueReusableCell(withReuseIdentifier: CollectionVliewHeadCell.cellIdentifier, for: indexPath) as! CollectionVliewHeadCell
+            
             return cell1
         case 1:
             let cell2 = mainCollectionView.dequeueReusableCell(withReuseIdentifier: CollectionVIewButtomCell.cellIdentifier, for: indexPath) as! CollectionVIewButtomCell
+            cell2.addData(array: favorite()[indexPath.row])
             return cell2
         default:
             let cell2 = mainCollectionView.dequeueReusableCell(withReuseIdentifier: CollectionVIewButtomCell.cellIdentifier, for: indexPath) as! CollectionVIewButtomCell
@@ -83,7 +93,7 @@ extension FirstTabViewController:  UICollectionViewDelegate, UICollectionViewDat
         if indexPath.section == 0 {
         return CGSize(width: view.frame.size.width , height: 250)
         } else if indexPath.section == 1 {
-            CGSize(width: view.frame.size.width , height: 150)
+            CGSize(width: view.frame.size.width , height: 130)
         }
         return CGSize(width: view.frame.size.width , height: 150)
     }

@@ -12,6 +12,8 @@
 		7707F720243AE64500658855 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7707F71F243AE64500658855 /* CustomTableViewCell.swift */; };
 		7707F722243AE68800658855 /* StarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7707F721243AE68800658855 /* StarTableViewController.swift */; };
 		7707F728243AEBA200658855 /* StarCustomTableVeiwCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7707F727243AEBA200658855 /* StarCustomTableVeiwCell.swift */; };
+		7707F72A243BF4EC00658855 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7707F729243BF4EC00658855 /* Favorite.swift */; };
+		7707F72C243C02BC00658855 /* Featured.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7707F72B243C02BC00658855 /* Featured.swift */; };
 		77B1DD9B2419813B00E3F76C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B1DD9A2419813B00E3F76C /* AppDelegate.swift */; };
 		77B1DD9D2419813B00E3F76C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B1DD9C2419813B00E3F76C /* SceneDelegate.swift */; };
 		77B1DDA22419813B00E3F76C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B1DDA02419813B00E3F76C /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 		7707F71F243AE64500658855 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		7707F721243AE68800658855 /* StarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarTableViewController.swift; sourceTree = "<group>"; };
 		7707F727243AEBA200658855 /* StarCustomTableVeiwCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarCustomTableVeiwCell.swift; sourceTree = "<group>"; };
+		7707F729243BF4EC00658855 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		7707F72B243C02BC00658855 /* Featured.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Featured.swift; sourceTree = "<group>"; };
 		77B1DD972419813B00E3F76C /* onBoardingDelayProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onBoardingDelayProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B1DD9A2419813B00E3F76C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77B1DD9C2419813B00E3F76C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				7707F71D243AE5F800658855 /* PastBoxModel.swift */,
+				7707F729243BF4EC00658855 /* Favorite.swift */,
+				7707F72B243C02BC00658855 /* Featured.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -203,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7707F72A243BF4EC00658855 /* Favorite.swift in Sources */,
 				7707F722243AE68800658855 /* StarTableViewController.swift in Sources */,
 				7707F71E243AE5F800658855 /* PastBoxModel.swift in Sources */,
 				77FF35A5242D490C00CB9A25 /* HomeViewController.swift in Sources */,
@@ -211,6 +218,7 @@
 				7707F71C243AE5A700658855 /* PastBoxTablViewController.swift in Sources */,
 				77B1DDCA24198C8500E3F76C /* OnBoardingsViewController.swift in Sources */,
 				7707F720243AE64500658855 /* CustomTableViewCell.swift in Sources */,
+				7707F72C243C02BC00658855 /* Featured.swift in Sources */,
 				77B1DD9B2419813B00E3F76C /* AppDelegate.swift in Sources */,
 				77FF35B024343DE300CB9A25 /* CollectionVliewHeadCell.swift in Sources */,
 				77FF35AD243422D300CB9A25 /* FirstTabViewController.swift in Sources */,
